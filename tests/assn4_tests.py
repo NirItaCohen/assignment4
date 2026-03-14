@@ -133,7 +133,7 @@ def test_assignment4_flow():
         assert response.status_code == 201
 
     response = requests.get(f"{STORE1}/pet-types/{id_2}", timeout=5)
-    assert response.status_code == 201
+    assert response.status_code == 200
     body = response.json()
     assert_fields(body, PET_TYPE2_VAL)
 
